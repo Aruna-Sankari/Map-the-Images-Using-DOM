@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#c1{
+display:flex;
+justify-content:space-between;
+margin-top:130px;
+}
+img{
+width:370px;
+height:370px;
+}
+</style>
+</head>
+<body>
+<div  id="c1"></div>
+<script>
+const images=[{id:1,img1:'Images/pic1.jpg'},{id:1,img1:'Images/pic2.jpg'},{id:1,img1:'Images/sea1.jpg'},{id:1,img1:'Images/menu_13.jpg'}];
+let pic=document.getElementById("c1");
+let a=images.map(function (e){
+return e.img1;
+});
+for(i=0;i<a.length;i++){
+let image=document.createElement('img');
+image.src=a[i];
+pic.appendChild(image);
+}
+</script>
+</body>
+</html>
